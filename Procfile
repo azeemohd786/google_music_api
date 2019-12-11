@@ -1,0 +1,1 @@
+web: gunicorn src.google_music_api.wsgi --log-file -
