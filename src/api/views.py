@@ -22,6 +22,10 @@ oauth = {
         'redirect_uri':'urn:ietf:wg:oauth:2.0:oob'
     }
 
+class ReturnNothing(APIView):
+    def get(self, request, *args, **kwargs):
+        return Response({})
+
 class GetAuthorizationURI(APIView):
     def get(self, request, *args, **kwargs):
         auth_uri = "https://accounts.google.com/o/oauth2/v2/auth?client_id=228293309116.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fskyjam&access_type=offline&response_type=code"
